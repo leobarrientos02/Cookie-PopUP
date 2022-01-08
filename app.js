@@ -20,6 +20,7 @@
 const tl = gsap.timeline({
   defaults: {
     duration: 0.75,
+    ease: "power1.out",
   },
 });
 
@@ -30,6 +31,8 @@ tl.fromTo(
   },
   {
     scale: 1,
+    ease: "elastic.out(1, 0.4)",
+    duration: 1.5,
   }
 );
 
@@ -44,5 +47,31 @@ tl.fromTo(
     opacity: 1,
     x: 0,
     rotation: "0deg",
-  }
+  },
+  // "<50%" change the timing of the motion, ex: half way through the motion start this gsap motion.
+  "<50%"
 );
+
+tl.fromTo(
+  ".text",
+  {
+    x: 30,
+    opacity: 0,
+  },
+  {
+    x: 0,
+    opacity: 1,
+  },
+  // '<' syncs the motion with the previous montions
+  "<"
+);
+
+const button = document.querySelector("button");
+button.addEventListener("click", () => {
+  gsap.to(".cookie-container", {
+    opacity: 0,
+    y: 100,
+    duration: 0.75,
+    ease: "power1.out",
+  });
+});
