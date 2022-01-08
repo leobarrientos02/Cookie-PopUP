@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
 .cookie-container{
     background: linear-gradient(260deg, #9b6c50 0%, #4f2626 100%);
     position: absolute;
@@ -11,7 +14,7 @@
     transform:  translate(-50%, -50%);
     color: white;
     display: flex;
-    width: 23rem;
+    width: 21rem;
     height: fit-content;
     border-radius: 1.2rem;
     padding: 1rem;
@@ -27,6 +30,7 @@
 
 .cookie{
     transform: scale(0.6);
+    overflow: visible;
 }
 
 .cookie-title{

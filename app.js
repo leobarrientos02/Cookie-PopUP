@@ -66,6 +66,38 @@ tl.fromTo(
   "<"
 );
 
+// COOKIE JUMP
+tl.fromTo(
+  ".cookie",
+  {
+    y: 0,
+    rotation: "0deg",
+  },
+  {
+    y: -20,
+    rotation: "-20deg",
+    yoyo: true,
+    repeat: -1, // -1 is to run forever
+  }
+);
+
+// CRUMBS JUMP
+tl.fromTo(
+  "#crumbs",
+  {
+    y: 0,
+    rotation: "0deg",
+  },
+  {
+    y: -20,
+    rotation: "-20deg",
+    yoyo: true,
+    repeat: -1, // -1 is to run forever
+  },
+  "<"
+);
+
+// FADING THE COOKIE OUT
 const button = document.querySelector("button");
 button.addEventListener("click", () => {
   gsap.to(".cookie-container", {
